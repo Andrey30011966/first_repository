@@ -2,13 +2,13 @@ def calculate_structure_sum(number):
     summ = 0
     if isinstance(number, (int, float)):
         summ += number
-    if isinstance(number, str):
+    elif isinstance(number, str):
         summ += len(number)
-    if isinstance(number, dict):
+    elif isinstance(number, dict):
         for key, value in number.items():
             summ += calculate_structure_sum(key)
             summ += calculate_structure_sum(value)
-    if isinstance(number, (list, tuple, set)):
+    elif isinstance(number, (list, tuple, set)):
         for i in number:
             summ += calculate_structure_sum(i)
 
