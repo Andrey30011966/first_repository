@@ -6,6 +6,3 @@ def divide(first, second):
         return inf
     res = first / second
     return res
-
-
-print(divide(4, 0))
